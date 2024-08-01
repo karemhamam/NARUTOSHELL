@@ -61,7 +61,9 @@ This shell supports various commands for basic file operations, environment mana
 7. **shisui**: Change the current working directory.
    - Usage: `shisui [directory]`
    - Equivalent to the `cd` command.
-    ![shisui](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.53_02d0ac77.jpg)
+
+![WhatsApp Image 2024-08-02 at 00 45 53_02d0ac77](https://github.com/user-attachments/assets/d2a168e5-3824-4eec-9fd2-171e8693d13f)
+
 
 8. **kakashi**: Return the type of the command (built-in, external, or unsupported).
    - Usage: `kakashi [command]`
