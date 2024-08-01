@@ -88,7 +88,7 @@ This shell supports various commands for basic file operations, environment mana
 
 ## Installation
 
-1. Clone the repository and compile the code: ``bash git clone ()
+1. Clone the repository and compile the code: ``bash git clone (https://github.com/karemhamam/NARUTOSHELL/tree/master)
 
 ## Compilation
 
