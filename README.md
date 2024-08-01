@@ -31,7 +31,10 @@ This shell supports various commands for basic file operations, environment mana
 3. **konan**: Copy a file to another file.
    - Usage: `konan source target`
    - Equivalent to the `cp` command.
-    ![konan](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.54_87b38fe6.jpg)
+
+
+![WhatsApp Image 2024-08-02 at 00 45 54_87b38fe6](https://github.com/user-attachments/assets/29e9f339-62ed-49e9-b73d-6cf6cdbdcca9)
+
 
 4. **shizune**: Move a file to another place.
    - Usage: `shizune source target`
