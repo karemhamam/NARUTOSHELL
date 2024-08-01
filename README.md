@@ -39,7 +39,10 @@ This shell supports various commands for basic file operations, environment mana
 4. **shizune**: Move a file to another place.
    - Usage: `shizune source target`
    - Equivalent to the `mv` command.
-    ![shizune](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.53_8e912a2f.jpg)
+
+
+![WhatsApp Image 2024-08-02 at 00 45 53_8e912a2f](https://github.com/user-attachments/assets/40d9edc8-6978-4bbd-85ec-e39df04bb861)
+
 
 5. **sasuke**: Print all the supported commands with a brief info about each one.
    - Usage: `sasuke`
