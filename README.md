@@ -18,7 +18,7 @@ This shell supports various commands for basic file operations, environment mana
 1. **nagato**: Print the current working directory.
    - Usage: `nagato`
    - Equivalent to the `pwd` command.
-   ![nagato](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.54_3a73ea0d.jpg)
+![WhatsApp Image 2024-08-02 at 00 45 54_3a73ea0d](https://github.com/user-attachments/assets/ae78a878-b71c-4456-9359-53b1ce2ac6b9)
 
 2. **neji**: Print a user input string on stdout.
    - Usage: `neji [your input string]`
