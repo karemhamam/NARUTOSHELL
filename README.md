@@ -75,13 +75,16 @@ This shell supports various commands for basic file operations, environment mana
 9. **gaara**: Print all the environment variables.
    - Usage: `gaara`
    - Equivalent to the `printenv` command.
+     
 ![WhatsApp Image 2024-08-02 at 00 45 52_12bc476b](https://github.com/user-attachments/assets/ec520a20-1213-43c9-bd7f-971b532da15e)
 
 
 10. **sakura**: Lists the last 10 processes with their exit status.
     - Usage: `sakura`
     - Equivalent to the `phist` command.
-    ![sakura](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.52_cea2c2fa.jpg)
+      
+![WhatsApp Image 2024-08-02 at 00 45 52_cea2c2fa](https://github.com/user-attachments/assets/d06d46bf-2439-4443-a91a-d942980826e4)
+
 
 ## Installation
 
