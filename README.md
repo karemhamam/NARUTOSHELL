@@ -47,7 +47,9 @@ This shell supports various commands for basic file operations, environment mana
 5. **sasuke**: Print all the supported commands with a brief info about each one.
    - Usage: `sasuke`
    - Equivalent to the `help` command.
-    ![sasuke](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.53_83c62696.jpg)
+     
+![WhatsApp Image 2024-08-02 at 00 45 53_83c62696](https://github.com/user-attachments/assets/10f1dc28-ad45-4bb3-b8bc-8463a5fa5fe3)
+
 
 6. **orochimaru**: Print "バイバイ" and terminate the shell.
    - Usage: `orochimaru`
