@@ -54,7 +54,9 @@ This shell supports various commands for basic file operations, environment mana
 6. **orochimaru**: Print "バイバイ" and terminate the shell.
    - Usage: `orochimaru`
    - Equivalent to the `exit` command.
-    ![orochimaru](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.53_ccf52604.jpg)
+
+![WhatsApp Image 2024-08-02 at 00 45 53_ccf52604](https://github.com/user-attachments/assets/23729cc8-7f84-499a-940d-174fd6daf91a)
+
 
 7. **shisui**: Change the current working directory.
    - Usage: `shisui [directory]`
