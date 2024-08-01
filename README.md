@@ -68,7 +68,9 @@ This shell supports various commands for basic file operations, environment mana
 8. **kakashi**: Return the type of the command (built-in, external, or unsupported).
    - Usage: `kakashi [command]`
    - Equivalent to the `type` command.
-    ![kakashi](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.52_0f9d1d14.jpg)
+     
+![WhatsApp Image 2024-08-02 at 00 45 52_0f9d1d14](https://github.com/user-attachments/assets/40375c30-9468-4680-ba2a-18722546c168)
+
 
 9. **gaara**: Print all the environment variables.
    - Usage: `gaara`
