@@ -1,7 +1,8 @@
 /* *******************************************************
-   * @File                 : My_shell.c
+   * @File                 : command.c
    * @Author               : mohamed bahget hamam
-   * @Brief                : shell v1.1
+   * @Brief                : shell v2.0
+   *@gmail                 : mahamedhamam15@gmail.com
    *******************************************************
 */
 
