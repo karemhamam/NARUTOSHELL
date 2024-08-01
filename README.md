@@ -3,7 +3,7 @@
 Welcome to NARUTO, a custom shell with built-in commands inspired by characters from the Naruto universe. 
 This shell supports various commands for basic file operations, environment management, and process tracking.
 
-![NARUTO Shell](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.40.37_50c98fe4.jpg)
+![WhatsApp Image 2024-08-02 at 00 40 37_50c98fe4](https://github.com/user-attachments/assets/8f01a615-7142-450b-9cb7-e287c892c092)
 
 ## Features
 
