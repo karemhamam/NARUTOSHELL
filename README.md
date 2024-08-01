@@ -18,12 +18,15 @@ This shell supports various commands for basic file operations, environment mana
 1. **nagato**: Print the current working directory.
    - Usage: `nagato`
    - Equivalent to the `pwd` command.
+     
 ![WhatsApp Image 2024-08-02 at 00 45 54_3a73ea0d](https://github.com/user-attachments/assets/ae78a878-b71c-4456-9359-53b1ce2ac6b9)
 
 2. **neji**: Print a user input string on stdout.
    - Usage: `neji [your input string]`
    - Equivalent to the `echo` command.
-    ![neji](D:\python_pic\shell_pic/WhatsApp Image 2024-08-02 at 00.45.54_461246c3.jpg)
+
+![WhatsApp Image 2024-08-02 at 00 45 54_461246c3](https://github.com/user-attachments/assets/bc0b2c39-ff11-4728-b520-6956f5b88259)
+
 
 3. **konan**: Copy a file to another file.
    - Usage: `konan source target`
