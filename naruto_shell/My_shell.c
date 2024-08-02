@@ -55,7 +55,7 @@ int main()
         Data_IN(input, args);
         if (strcmp (args[0],"nagato") == 0)
         {
-            nagato();
+            nagato(args);
         }else if (strcmp (args[0] , "neji") == 0)
         {
             neji(args);
@@ -110,6 +110,7 @@ int main()
    @User                 @Date             @time
    *******************************************************
    mohamed hamam         31july2024         1:22 pm
+   mohamed hamma         2 aug 2024         4:50 pm
 
 */
 
