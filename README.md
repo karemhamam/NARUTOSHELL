@@ -12,7 +12,8 @@ This shell supports various commands for basic file operations, environment mana
 - **Environment Management**: Print environment variables and change directories.
 - **Process Tracking**: List the last 10 processes with their exit statuses.
 - **Command Information**: Get information about built-in, external, and unsupported commands.
-
+- **fix some errrors** : fix the combined commnad error, and examples of the output.
+  
 ## Supported Commands
 
 1. **nagato**: Print the current working directory.
@@ -88,7 +89,7 @@ This shell supports various commands for basic file operations, environment mana
 
 ## Installation
 
-1. Clone the repository and compile the code: ``bash git clone (https://github.com/karemhamam/NARUTOSHELL/tree/master)
+1. Clone the repository and compile the code:  git clone (https://github.com/karemhamam/NARUTOSHELL/tree/master)
 
 ## Compilation
 
