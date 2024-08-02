@@ -48,7 +48,7 @@ This shell supports various commands for basic file operations, environment mana
    - Usage: `sasuke`
    - Equivalent to the `help` command.
      
-![WhatsApp Image 2024-08-02 at 00 45 53_83c62696](https://github.com/user-attachments/assets/10f1dc28-ad45-4bb3-b8bc-8463a5fa5fe3)
+![WhatsApp Image 2024-08-02 at 15 45 01_24074101](https://github.com/user-attachments/assets/e87f0790-4efe-49e5-a5fc-1e5b60cf02db)
 
 
 6. **orochimaru**: Print "バイバイ" and terminate the shell.
