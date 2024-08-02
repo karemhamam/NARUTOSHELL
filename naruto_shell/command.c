@@ -2,7 +2,7 @@
    * @File                 : command.c
    * @Author               : mohamed bahget hamam
    * @Brief                : shell v2.0
-   *@gmail                 : mahamedhamam15@gmail.com
+   * @gmail                : mahamedhamam15@gmail.com
    *******************************************************
 */
 
@@ -15,6 +15,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <errno.h>
 #include <dirent.h>
 #include "command.h"
@@ -46,16 +48,23 @@ void prompt()
     printf("NARUTO :$ ");
 }
 
-void nagato ()
+void nagato (char **args)
 {
-    char cwd [1024];
-    if (getcwd(cwd , sizeof(cwd)) != NULL)
+    if (args == NULL || args[1] == NULL )
     {
-        printf("%s\n", cwd);
+        char cwd [1024];
+        if (getcwd(cwd , sizeof(cwd)) != NULL)
+        {
+            printf("%s\n", cwd);
+        }else
+        {
+            perror("Feh ERROR Hena");
+        }
     }else
     {
-        perror("Feh ERROR Hena");
+        printf("error: usage: nagato\n");
     }
+
 }
 
 void neji (char **args)
@@ -199,6 +208,7 @@ void sasuke ( char **args)
         printf("konan: copy a file to another file\n");
         printf("konan  = cp \n");
         printf("Usage: konan source target\n");
+
     }else if (strcmp(args[1] , "shizune") == 0 )
     {
         printf
@@ -214,23 +224,7 @@ void sasuke ( char **args)
         printf("shizune: move a file to another place\n");
         printf("konan  = mv \n");
         printf("Usage: shizune source target\n");
-    }else if (strcmp(args[1] , "sasuke") == 0 )
-    {
-        printf
-        (                                                                  
-            "   ▄████████    ▄████████    ▄████████ ███    █▄     ▄█   ▄█▄    ▄████████  \n"
-            "  ███    ███   ███    ███   ███    ███ ███    ███   ███ ▄███▀   ███    ███  \n"
-            "  ███    █▀    ███    ███   ███    █▀  ███    ███   ███▐██▀     ███    █▀   \n"
-            "  ███          ███    ███   ███        ███    ███  ▄█████▀     ▄███▄▄▄      \n"
-            "▀███████████ ▀███████████ ▀███████████ ███    ███ ▀▀█████▄    ▀▀███▀▀▀      \n"
-            "         ███   ███    ███          ███ ███    ███   ███▐██▄     ███    █▄   \n"
-            "   ▄█    ███   ███    ███    ▄█    ███ ███    ███   ███ ▀███▄   ███    ███  \n"
-            " ▄████████▀    ███    █▀   ▄████████▀  ████████▀    ███   ▀█▀   ██████████  \n"
-            
-        ); 
-        printf("sasuke: print all the supported command with a brief info about each one\n");
-        printf("sasuke  = help \n");
-        printf("Usage: saskuke source target\n");
+
     }else if (strcmp(args[1] , "orochimaru") == 0 )
     {
         printf
@@ -247,6 +241,7 @@ void sasuke ( char **args)
         printf("orochimaru: print \"バイバイ\" and terminate the shell\n");
         printf("orochimaru  = exit \n");
         printf("Usage: orochimaru \n");
+
     }else if (strcmp(args[1] , "shisui") == 0 )
     {
         printf
@@ -263,6 +258,7 @@ void sasuke ( char **args)
         printf("shisui: change the currnet working directory\n");
         printf("shisui  = cd \n");
         printf("Usage: shisui [directory] \n");
+
     }else if (strcmp(args[1] , "kakashi") == 0 )
     {
         printf
@@ -281,6 +277,7 @@ void sasuke ( char **args)
         printf("kakashi:  return the type of the command built-in or external or unsupported\n");
         printf("kakashi  = type \n");
         printf("Usage: kakashi [command] \n");
+
     }else if (strcmp(args[1] , "gaara") == 0 )
     {
         printf
@@ -299,6 +296,7 @@ void sasuke ( char **args)
         printf("gaara:  print all the environment variables\n");
         printf("gaara  = envir \n");
         printf("Usage: gaara [variable] \n");
+
     }else if (strcmp(args[1] , "sakura") == 0 )
     {
         printf
@@ -316,6 +314,7 @@ void sasuke ( char **args)
         printf("sakura:  Lists the last 10 processes with their exit status\n");
         printf("sakura  = phist \n");
         printf("Usage: sakura  \n");
+
     }else if (strcmp(args[1] , "sasuke") == 0 )
     {
         printf
@@ -334,9 +333,10 @@ void sasuke ( char **args)
         printf("sasuke:  Lists the last 10 processes with their exit status\n");
         printf("sasuke  = phist \n");
         printf("Usage: sasuke || sasuke [command]  \n");
+
     }else
     {
-        printf("%s is not a supported command, plz type sasuke to know the supported commands\n" , args[1]);
+        printf("%s is not a supported command, plz enter \"sasuke\" to know the supported commands\n" , args[1]);
     }
 }
 
@@ -344,10 +344,17 @@ void sasuke ( char **args)
 
 
 int orochimaru (char **args)
-{
-    printf("バイバイ\n");
-    exit(0);
-    return 0 ;
+{   
+    if (args == NULL || args[1] == NULL)
+    {
+        printf("バイバイ\n");
+        exit(0);
+        return 0 ;
+    }else
+    {
+        printf("error: usage: orochimaru\n");
+    }
+
 }
 
 int shisui ( char **args)
@@ -362,20 +369,66 @@ int shisui ( char **args)
     return 1 ;
 }
 
+int is_external(const char *command) {
+    char *path_env = getenv("PATH");
+    if (path_env == NULL) {
+        return 0;
+    }
+   
+    char *path_env_copy = strdup(path_env);
+    if (path_env_copy == NULL) {
+        perror("strdup");
+        return 0;
+    }
+
+    
+    char *dir = strtok(path_env_copy, ":");
+    while (dir != NULL) {
+        
+        char command_path[1024];
+        snprintf(command_path, sizeof(command_path), "%s/%s", dir, command);
+        
+        
+        struct stat st;
+        if (stat(command_path, &st) == 0 && (st.st_mode & S_IXUSR)) {
+            free(path_env_copy);
+            return 1; 
+        }
+
+        dir = strtok(NULL, ":");
+    }
+
+    free(path_env_copy);
+    return 0;
+}
+
 int kakashi (char **args)
 {
     if (args[1] == NULL)
     {
-        fprintf(stderr , "type: expected argument to \"type\"\n");
+        fprintf(stderr , "type: expected argument to 'type' \n");
+        return 1 ;
 
-    }else if (strcmp(args[1] , "konan") == 0 || strcmp(args[1] , "shizune") == 0 || strcmp(args[1] , "nagato") == 0 || strcmp(args[1] , "neji") == 0 || strcmp(args[1] , "sasuke" ) == 0 || strcmp(args[1] , "orochimaru") == 0 || strcmp(args[1] , "shisui") == 0 || strcmp(args[1] , "kakashi") == 0 || strcmp(args[1] , "gaara") == 0 || strcmp(args[1] , "sakura") == 0)
+    }
+    const char *built_in_commands[]={"konan", "shizune" , "nagato" , "neji" , "sasuke" , "orochimaru" , "shisui" , "kakashi" , "gaara" , "sakura"};
+    size_t num_built_in = sizeof(built_in_commands)/sizeof(built_in_commands[0]);
+    ssize_t i = 0 ;
+    for ( i = 0 ; i < num_built_in ;i++)
     {
-        printf("%s is a shell built-in command\n" , args[1]);
+        if (strcmp(args[1] , built_in_commands[i]) == 0 )
+        {
+            printf("'%s' is a shell built-in command\n" , args[1]);
+            return 1; 
+        }
+    }
+    if (is_external(args[1]))
+    {
+        printf("'%s' is an external command\n" , args[1]);
     }else
     {
-        printf("%s is an external command or unsupported command\n" , args[1]);
+        printf("'%s' is an unsupported command\n", args[1]);
     }
-    return 1; 
+    return 1 ;
 }
 
 int gaara (char **args)
@@ -464,8 +517,10 @@ void execute_command(char **args)
 
 
 /* *******************************************************
-   @User                 @Date             @time
+   @User                 @Date               @time 
    *******************************************************
-   mohamed hamam         31july2024         1:22pm
+   mohamed hamam         31july2024          1:22pm
+   mohamed hamam         2 aug 2024          4:50pm
+
 */
 
