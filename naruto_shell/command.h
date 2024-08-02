@@ -8,7 +8,7 @@
 
 void prompt();
 void Data_IN(char *input , char **args);
-void nagato();
+void nagato(char **args);
 void neji (char **args);
 void konan (char **args);
 void shizune (char **args);
@@ -19,6 +19,7 @@ int shisui ( char **args);
 int kakashi (char **args);
 int gaara (char **args);
 int sakura (char **args);
+int is_external(const char *command);
 
 
 #endif
