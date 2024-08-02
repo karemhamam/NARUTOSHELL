@@ -94,7 +94,7 @@ This shell supports various commands for basic file operations, environment mana
 
 To compile the shell program, use the following command:
 
-``bash gcc -o myShell My_shell.c command.c
+ gcc -o myShell My_shell.c command.c
 
 ## Usage
 
